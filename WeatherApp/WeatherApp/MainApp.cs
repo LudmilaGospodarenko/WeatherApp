@@ -14,7 +14,6 @@ namespace WeatherForecast
         const string ForecastUrl =
             "http://api.openweathermap.org/data/2.5/forecast?" +
             "q=London&mode=xml&units=metric&APPID=" + API_KEY;
-        // {"_id":625144,"name":"Minsk","country":"BY","coord":{"lon":27.566668,"lat":53.900002}}
 
         static void Main(string[] args)
         {
@@ -23,8 +22,8 @@ namespace WeatherForecast
             Console.WriteLine(response);
             Console.WriteLine("__________________________");
             ComposeMessage newMessage = new ComposeMessage();
-            newMessage.ComposeTemperature(response);
-            newMessage.ComposeClouds(response);
+            MessageSending messageTemplate = new MessageSending();
+            messageTemplate.SendMessage(newMessage.CreateMessage(response));
             Console.ReadLine();
         }
     }

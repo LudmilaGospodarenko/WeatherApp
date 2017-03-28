@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Xml;
@@ -60,6 +59,23 @@ namespace WeatherApp.Logic
                 clouds = clouds.Substring(0, (clouds.Length - 1));
             }
             return clouds;
+        }
+
+        //Select precipitation from WS response
+        public string PickPrecipitation(string response)
+        {
+            string precipitation = response.Substring(response.IndexOf("precipitation"));
+            precipitation = precipitation.Substring(1, 45);
+            if (precipitation.Contains("type="))
+            {
+                precipitation = precipitation.Substring(precipitation.IndexOf("type=\""));
+                while (precipitation.Contains("\""))
+                {
+                    precipitation = precipitation.Substring(0, (precipitation.Length - 1));
+                }
+            }
+            else precipitation = "";
+            return precipitation;
         }
 
     }
