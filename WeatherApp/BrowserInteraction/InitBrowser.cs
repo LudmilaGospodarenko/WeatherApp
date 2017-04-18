@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
+using System.Collections.Generic;
 using WeatherApp.Logic;
 using WeatherApp.Pages;
 
@@ -16,7 +17,7 @@ namespace BrowserInteract
 
         const string cache = "user-data-dir=C:/Users/Crazy/AppData/Local/Google/Chrome/User Data/Default";
 
-        const string user = "lyudmila gospodarenko";
+        //const string user = "lyudmila gospodarenko";
         //lyudmila gospodarenko
         //Sergey Gospodarenko
 
@@ -33,7 +34,8 @@ namespace BrowserInteract
         [TestCase]
         public void SendWeatherMessage()
         {
-
+            UserList userList = new UserList();
+            List<string> users = userList.getUsers();
             WSResponce respObject = new WSResponce();
             string response = respObject.GetFormattedXml(CurrentUrl);
             Console.WriteLine(response);
@@ -47,8 +49,40 @@ namespace BrowserInteract
 
             StartPage startPage = new StartPage(driver);
             startPage.GoToUrl();
-            startPage.OpenChat(user);
-            startPage.SendMesage(message);
+            foreach (string user in users)
+            {
+                startPage.OpenChat(user);
+                startPage.SendMesage(message);
+            }
+
+            // driver.Quit();
+        }
+
+
+        [TestCase]
+        public void SendWeatherMessageDeserialized()
+        {
+            UserList userList = new UserList();
+            List<string> users = userList.getUsers();
+            WSResponce respObject = new WSResponce();
+            current response = new current();
+            response = respObject.DeserializedResponse(CurrentUrl);
+            Console.WriteLine(response.city.name + "\t" + response.temperature.min + "-" + response.temperature.max + "\t" + response.weather.number + "\t" + response.clouds.name);
+            Console.WriteLine("__________________________");
+            //ComposeMessage newMessage = new ComposeMessage();
+            //string message = newMessage.CreateMessage(response);
+
+            //ChromeOptions options = new ChromeOptions();
+            //options.AddArgument(cache);
+            //driver = new ChromeDriver(options);
+
+            //StartPage startPage = new StartPage(driver);
+            //startPage.GoToUrl();
+            //foreach (string user in users)
+            //{
+            //    startPage.OpenChat(user);
+            //    startPage.SendMesage(message);
+            //}
 
             // driver.Quit();
         }

@@ -2,6 +2,9 @@
 using System.IO;
 using System.Net;
 using System.Xml;
+using WeatherApp.Logic;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace WeatherApp.Logic
 {
@@ -32,6 +35,27 @@ namespace WeatherApp.Logic
                     return string_writer.ToString();
                 }
             }
+        }
+
+        public current DeserializedResponse(string url)
+        {
+            current responseObj = new current();
+
+            var request = WebRequest.Create(url);
+            var response = request.GetResponse();
+
+            if (((HttpWebResponse)response).StatusCode == HttpStatusCode.OK)
+            {
+                // Get the stream containing content returned by the server.
+                Stream dataStream = response.GetResponseStream();
+                // Open the stream using a StreamReader.
+                StreamReader reader = new StreamReader(dataStream);
+
+                XmlSerializer serializer = new XmlSerializer(typeof(current));
+                current deserialized = (current)serializer.Deserialize(reader);
+                return deserialized;
+            }
+            else return null;
         }
 
         //Select temperature from WS response
