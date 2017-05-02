@@ -53,6 +53,8 @@ namespace WeatherApp.Logic
 
                 XmlSerializer serializer = new XmlSerializer(typeof(current));
                 current deserialized = (current)serializer.Deserialize(reader);
+                Console.WriteLine(deserialized.city.name + "\t" + deserialized.temperature.min + "-" + deserialized.temperature.max + "\t" + deserialized.weather.number + "\t" + deserialized.clouds.name);
+                Console.WriteLine("__________________________");
                 return deserialized;
             }
             else return null;

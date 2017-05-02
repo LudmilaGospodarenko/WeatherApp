@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace WeatherApp.Logic
 {
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
+    [XmlTypeAttribute(AnonymousType = true)]
+    [XmlRootAttribute(Namespace = "", IsNullable = false)]
     public partial class current
     {
 
@@ -98,9 +98,9 @@ namespace WeatherApp.Logic
     }
 
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentCity
     {
 
@@ -132,14 +132,14 @@ namespace WeatherApp.Logic
             set { this.sunField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public uint id
         {
             get { return this.idField; }
             set { this.idField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string name
         {
             get { return this.nameField; }
@@ -148,9 +148,9 @@ namespace WeatherApp.Logic
     }
 
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentCityCoord
     {
 
@@ -158,14 +158,14 @@ namespace WeatherApp.Logic
 
         private decimal latField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public decimal lon
         {
             get { return this.lonField; }
             set { this.lonField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public decimal lat
         {
             get { return this.latField; }
@@ -173,34 +173,34 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentCitySun
     {
 
-        private System.DateTime riseField;
+        private DateTime riseField;
 
-        private System.DateTime setField;
+        private DateTime setField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public System.DateTime rise
+        [XmlAttributeAttribute()]
+        public DateTime rise
         {
             get { return this.riseField; }
             set { this.riseField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public System.DateTime set
+        [XmlAttributeAttribute()]
+        public DateTime set
         {
             get { return this.setField; }
             set { this.setField = value; }
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentTemperature
     {
 
@@ -212,28 +212,28 @@ namespace WeatherApp.Logic
 
         private string unitField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public byte value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public byte min
         {
             get { return this.minField; }
             set { this.minField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public byte max
         {
             get { return this.maxField; }
             set { this.maxField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string unit
         {
             get { return this.unitField; }
@@ -242,9 +242,9 @@ namespace WeatherApp.Logic
     }
 
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentHumidity
     {
 
@@ -253,14 +253,14 @@ namespace WeatherApp.Logic
         private string unitField;
 
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public byte value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string unit
         {
             get { return this.unitField; }
@@ -268,9 +268,9 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentPressure
     {
 
@@ -278,14 +278,14 @@ namespace WeatherApp.Logic
 
         private string unitField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public ushort value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string unit
         {
             get { return this.unitField; }
@@ -293,9 +293,9 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentWind
     {
 
@@ -324,9 +324,9 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentWindSpeed
     {
 
@@ -334,14 +334,14 @@ namespace WeatherApp.Logic
 
         private string nameField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public byte value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string name
         {
             get { return this.nameField; }
@@ -349,9 +349,9 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentWindDirection
     {
 
@@ -361,21 +361,21 @@ namespace WeatherApp.Logic
 
         private string nameField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public byte value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string code
         {
             get { return this.codeField; }
             set { this.codeField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string name
         {
             get { return this.nameField; }
@@ -383,9 +383,9 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentClouds
     {
 
@@ -393,14 +393,14 @@ namespace WeatherApp.Logic
 
         private string nameField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public byte value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string name
         {
             get { return this.nameField; }
@@ -408,15 +408,15 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentVisibility
     {
 
         private ushort valueField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public ushort value
         {
             get { return this.valueField; }
@@ -424,15 +424,15 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentPrecipitation
     {
 
         private string modeField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string mode
         {
             get { return this.modeField; }
@@ -440,9 +440,9 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentWeather
     {
 
@@ -452,21 +452,21 @@ namespace WeatherApp.Logic
 
         private string iconField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public ushort number
         {
             get { return this.numberField; }
             set { this.numberField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
         }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string icon
         {
             get { return this.iconField; }
@@ -474,16 +474,16 @@ namespace WeatherApp.Logic
         }
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentLastupdate
     {
 
-        private System.DateTime valueField;
+        private DateTime valueField;
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public System.DateTime value
+        [XmlAttributeAttribute()]
+        public DateTime value
         {
             get { return this.valueField; }
             set { this.valueField = value; }

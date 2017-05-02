@@ -40,6 +40,19 @@ namespace BrowserInteract
             string response = respObject.GetFormattedXml(CurrentUrl);
             Console.WriteLine(response);
             Console.WriteLine("__________________________");
+        }
+
+
+        [TestCase]
+        public void SendWeatherMessageDeserialized()
+        {
+            UserList userList = new UserList();
+            List<string> users = userList.getUsers();
+            WSResponce respObject = new WSResponce();
+            current response = new current();
+            response = respObject.DeserializedResponse(CurrentUrl);
+            //Console.WriteLine(response.city.name + "\t" + response.temperature.min + "-" + response.temperature.max + "\t" + response.weather.number + "\t" + response.clouds.name);
+            //Console.WriteLine("__________________________");
             ComposeMessage newMessage = new ComposeMessage();
             string message = newMessage.CreateMessage(response);
 
@@ -55,36 +68,7 @@ namespace BrowserInteract
                 startPage.SendMesage(message);
             }
 
-            // driver.Quit();
-        }
-
-
-        [TestCase]
-        public void SendWeatherMessageDeserialized()
-        {
-            UserList userList = new UserList();
-            List<string> users = userList.getUsers();
-            WSResponce respObject = new WSResponce();
-            current response = new current();
-            response = respObject.DeserializedResponse(CurrentUrl);
-            Console.WriteLine(response.city.name + "\t" + response.temperature.min + "-" + response.temperature.max + "\t" + response.weather.number + "\t" + response.clouds.name);
-            Console.WriteLine("__________________________");
-            //ComposeMessage newMessage = new ComposeMessage();
-            //string message = newMessage.CreateMessage(response);
-
-            //ChromeOptions options = new ChromeOptions();
-            //options.AddArgument(cache);
-            //driver = new ChromeDriver(options);
-
-            //StartPage startPage = new StartPage(driver);
-            //startPage.GoToUrl();
-            //foreach (string user in users)
-            //{
-            //    startPage.OpenChat(user);
-            //    startPage.SendMesage(message);
-            //}
-
-            // driver.Quit();
+            driver.Quit();
         }
     }
 }

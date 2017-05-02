@@ -4,38 +4,35 @@ namespace WeatherApp.Logic
 {
     public class ComposeMessage
     {
-        WSResponce wsResp = new WSResponce();
-
         //Compose text for different values of temperature, returned from WS
-        private string ComposeTemperature(string response)
+        private string ComposeTemperature(current response)
         {
-            decimal temperatureValue = wsResp.PickTemperature(response);
-            string result;
-            if (temperatureValue > 25)
-                result = "Сегодня очень жарко, до " + temperatureValue.ToString() + " °С. ";
-            else if (temperatureValue > 18)
-                result = "Сегодня тепло и не жарко, до " + temperatureValue.ToString() + " °С. ";
-            else if (temperatureValue > 10)
-                result = "Сегодня достаточно прохладно, до " + temperatureValue.ToString() + " °С. ";
-            else if (temperatureValue > 0)
-                result = "Сегодня достаточно холодно, до " + temperatureValue.ToString() + " °С. ";
-            else if (temperatureValue > -5)
-                result = "Сегодня не так уж и холодно, всего " + temperatureValue.ToString() + " °С. ";
-            else if (temperatureValue > -10)
-                result = "Сегодня холодно, до " + temperatureValue.ToString() + " °С. ";
-            else if (temperatureValue > -20)
-                result = "Сегодня дубак, до " + temperatureValue.ToString() + "} °С. ";
-            else if (temperatureValue > -30)
-                result = "Сегодня писец холодильник, до " + temperatureValue.ToString() + " °С. ";
+            string result = "";
+            if (response.temperature.value > 25)
+                result = "Сегодня очень жарко, до " + response.temperature.value + " °С. ";
+            else if (response.temperature.value > 18)
+                result = "Сегодня тепло и не жарко, до " + response.temperature.value + " °С. ";
+            else if (response.temperature.value > 10)
+                result = "Сегодня достаточно прохладно, до " + response.temperature.value + " °С. ";
+            else if (response.temperature.value > 0)
+                result = "Сегодня достаточно холодно, до " + response.temperature.value + " °С. ";
+            else if (response.temperature.value > -5)
+                result = "Сегодня не так уж и холодно, всего " + response.temperature.value + " °С. ";
+            else if (response.temperature.value > -10)
+                result = "Сегодня холодно, до " + response.temperature.value + " °С. ";
+            else if (response.temperature.value > -20)
+                result = "Сегодня дубак, до " + response.temperature.value + "} °С. ";
+            else if (response.temperature.value > -30)
+                result = "Сегодня писец холодильник, до " + response.temperature.value + " °С. ";
             else result = "Температуру получить не удалось. ";
             return result;
         }
 
         //Compose string for weather itself - if it is cloudy/sunny, depending on WS response 
-        private string ComposeClouds (string response)
+        private string ComposeClouds(current response)
         {
             string result;
-            string cloudsValue = wsResp.PickClouds(response);
+            string cloudsValue = response.clouds.name;
             switch (cloudsValue)
             {
                 case "clear sky":
@@ -74,10 +71,10 @@ namespace WeatherApp.Logic
         }
 
         //Compose string for precipitation (if it will be rainy), returned from WS
-        private string ComposePrecipitation(string response)
+        private string ComposePrecipitation(current response)
         {
             string result;
-            string rainyValue = wsResp.PickPrecipitation(response);
+            string rainyValue = response.precipitation.mode;
             switch (rainyValue)
             {
                 case "":
@@ -105,7 +102,7 @@ namespace WeatherApp.Logic
         }
 
         //Compose the whole message
-        public string CreateMessage(string response)
+        public string CreateMessage(current response)
         {
             string message;
             message = ComposeTemperature(response);
