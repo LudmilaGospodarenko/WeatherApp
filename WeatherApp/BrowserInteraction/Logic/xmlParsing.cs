@@ -204,30 +204,30 @@ namespace WeatherApp.Logic
     public partial class currentTemperature
     {
 
-        private byte valueField;
+        private decimal valueField;
 
-        private byte minField;
+        private decimal minField;
 
-        private byte maxField;
+        private decimal maxField;
 
         private string unitField;
 
         [XmlAttributeAttribute()]
-        public byte value
+        public decimal value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
         }
 
         [XmlAttributeAttribute()]
-        public byte min
+        public decimal min
         {
             get { return this.minField; }
             set { this.minField = value; }
         }
 
         [XmlAttributeAttribute()]
-        public byte max
+        public decimal max
         {
             get { return this.maxField; }
             set { this.maxField = value; }
@@ -248,13 +248,13 @@ namespace WeatherApp.Logic
     public partial class currentHumidity
     {
 
-        private byte valueField;
+        private decimal valueField;
 
         private string unitField;
 
 
         [XmlAttributeAttribute()]
-        public byte value
+        public decimal value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
@@ -274,12 +274,12 @@ namespace WeatherApp.Logic
     public partial class currentPressure
     {
 
-        private ushort valueField;
+        private decimal valueField;
 
         private string unitField;
 
         [XmlAttributeAttribute()]
-        public ushort value
+        public decimal value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
@@ -330,12 +330,12 @@ namespace WeatherApp.Logic
     public partial class currentWindSpeed
     {
 
-        private byte valueField;
+        private decimal valueField;
 
         private string nameField;
 
         [XmlAttributeAttribute()]
-        public byte value
+        public decimal value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
@@ -355,14 +355,14 @@ namespace WeatherApp.Logic
     public partial class currentWindDirection
     {
 
-        private byte valueField;
+        private decimal valueField;
 
         private string codeField;
 
         private string nameField;
 
         [XmlAttributeAttribute()]
-        public byte value
+        public decimal value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
@@ -389,12 +389,12 @@ namespace WeatherApp.Logic
     public partial class currentClouds
     {
 
-        private byte valueField;
+        private decimal valueField;
 
         private string nameField;
 
         [XmlAttributeAttribute()]
-        public byte value
+        public decimal value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
@@ -414,10 +414,10 @@ namespace WeatherApp.Logic
     public partial class currentVisibility
     {
 
-        private ushort valueField;
+        private decimal valueField;
 
         [XmlAttributeAttribute()]
-        public ushort value
+        public decimal value
         {
             get { return this.valueField; }
             set { this.valueField = value; }
@@ -446,14 +446,14 @@ namespace WeatherApp.Logic
     public partial class currentWeather
     {
 
-        private ushort numberField;
+        private decimal numberField;
 
         private string valueField;
 
         private string iconField;
 
         [XmlAttributeAttribute()]
-        public ushort number
+        public decimal number
         {
             get { return this.numberField; }
             set { this.numberField = value; }

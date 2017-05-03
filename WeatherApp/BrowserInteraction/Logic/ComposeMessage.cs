@@ -37,33 +37,33 @@ namespace WeatherApp.Logic
             {
                 case "clear sky":
                     {
-                        result = "Небо ясное.";
+                        result = "Небо ясное. ";
                         break;
                     }
                 case "few clouds":
                     {
-                        result = "Малооблачно.";
+                        result = "Малооблачно. ";
                         break;
                     }
                 case "scattered clouds":
                     {
-                        result = "Рассеянные облака.";
+                        result = "Рассеянные облака. ";
                         break;
                     }
                 case "broken clouds":
                     {
-                        result = "Разорванные облака.";
+                        result = "Разорванные облака. ";
                         break;
                     }
                 case "overcast clouds":
                     {
-                        result = "Облачно, небольшой дождь.";
+                        result = "Облачно, небольшой дождь. ";
                         break;
                     }
 
                 default:
                     {
-                        result = "Подходящего варианта соответствия для погоды не найдено.";
+                        result = "Подходящего варианта соответствия для погоды не найдено. ";
                         break;
                     }
             }
@@ -84,17 +84,22 @@ namespace WeatherApp.Logic
                     }
                 case "rain":
                     {
-                        result = "Ожидается дождь, возьми с собой зонт.";
+                        result = "Ожидается дождь, возьми с собой зонт. ";
                         break;
                     }
                 case "snow":
                     {
-                        result = "Ожидается снегопад.";
+                        result = "Ожидается снегопад. ";
+                        break;
+                    }
+                case "no":
+                    {
+                        result = "Осадков не ожидается. ";
                         break;
                     }
                 default:
                     {
-                        result = "Подходящего варианта соответствия для осадков не найдено.";
+                        result = "Подходящего варианта соответствия для осадков не найдено. ";
                         break;
                     }
             }
