@@ -37,7 +37,7 @@ namespace WeatherApp.Logic
             }
         }
 
-        public current DeserializedResponse(string url)
+        public current CurrentWeatherResponse(string url)
         {
             current responseObj = new current();
 
@@ -53,12 +53,36 @@ namespace WeatherApp.Logic
 
                 XmlSerializer serializer = new XmlSerializer(typeof(current));
                 current deserialized = (current)serializer.Deserialize(reader);
-                Console.WriteLine(deserialized.city.name + "\t" + deserialized.temperature.min + "-" + deserialized.temperature.max + "\t" + deserialized.weather.number + "\t" + deserialized.clouds.name);
-                Console.WriteLine("__________________________");
+                return deserialized;
+
+            }
+            else return null;
+        }
+
+        public weatherdata WeatherForecastResponse(string url)
+        {
+            weatherdata responseObj = new weatherdata();
+
+            var request = WebRequest.Create(url);
+            var response = request.GetResponse();
+
+            if (((HttpWebResponse)response).StatusCode == HttpStatusCode.OK)
+            {
+                // Get the stream containing content returned by the server.
+                Stream dataStream = response.GetResponseStream();
+                // Open the stream using a StreamReader.
+                StreamReader reader = new StreamReader(dataStream);
+
+                XmlSerializer serializer = new XmlSerializer(typeof(weatherdata));
+                weatherdata deserialized = (weatherdata)serializer.Deserialize(reader);
+
                 return deserialized;
             }
             else return null;
         }
+
+
+
 
         //Select temperature from WS response
         public decimal PickTemperature(string response)

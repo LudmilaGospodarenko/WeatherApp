@@ -68,9 +68,10 @@
   <ItemGroup>
     <Compile Include="InitBrowser.cs" />
     <Compile Include="Logic\ComposeMessage.cs" />
+    <Compile Include="Logic\ParseForecast.cs" />
     <Compile Include="Logic\UserList.cs" />
     <Compile Include="Logic\WSResponse.cs" />
-    <Compile Include="Logic\xmlParsing.cs" />
+    <Compile Include="Logic\ParseCurrent.cs" />
     <Compile Include="Pages\MainPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

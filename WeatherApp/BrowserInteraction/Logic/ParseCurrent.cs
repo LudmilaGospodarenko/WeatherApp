@@ -1,15 +1,11 @@
 ﻿using System;
-using System.IO;
 using System.Xml.Serialization;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace WeatherApp.Logic
 {
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     [XmlRootAttribute(Namespace = "", IsNullable = false)]
     public partial class current
@@ -99,7 +95,7 @@ namespace WeatherApp.Logic
 
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentCity
     {
@@ -149,7 +145,7 @@ namespace WeatherApp.Logic
 
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentCityCoord
     {
@@ -174,7 +170,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentCitySun
     {
@@ -199,7 +195,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentTemperature
     {
@@ -243,7 +239,7 @@ namespace WeatherApp.Logic
 
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentHumidity
     {
@@ -269,7 +265,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentPressure
     {
@@ -294,7 +290,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentWind
     {
@@ -325,7 +321,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentWindSpeed
     {
@@ -350,7 +346,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentWindDirection
     {
@@ -384,7 +380,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentClouds
     {
@@ -409,7 +405,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentVisibility
     {
@@ -425,7 +421,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentPrecipitation
     {
@@ -441,7 +437,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentWeather
     {
@@ -475,7 +471,7 @@ namespace WeatherApp.Logic
     }
 
     [SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [DesignerCategory("code")]
     [XmlTypeAttribute(AnonymousType = true)]
     public partial class currentLastupdate
     {
